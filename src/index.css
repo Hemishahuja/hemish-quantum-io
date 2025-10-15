@@ -54,6 +54,70 @@ All colors MUST be HSL.
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar (from shadcn) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 40% 10%;
+    --sidebar-primary: 220 70% 20%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 60% 96%;
+    --sidebar-accent-foreground: 220 70% 20%;
+    --sidebar-border: 220 15% 90%;
+    --sidebar-ring: 220 70% 20%;
+  }
+
+  .dark {
+    --background: 220 40% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 35% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 35% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 260 80% 55%;
+    --primary-foreground: 220 40% 8%;
+
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 25% 15%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 260 80% 55%;
+    --accent-foreground: 220 40% 8%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 260 80% 55%;
+
+    /* Dark mode custom tokens */
+    --quantum-violet: 260 80% 60%;
+    --deep-navy: 220 70% 30%;
+    --light-accent: 260 70% 65%;
+    
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 40% 15%) 0%, hsl(260 80% 30%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 40% 8%) 0%, hsl(220 35% 12%) 100%);
+    
+    /* Dark Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 24px hsl(260 80% 55% / 0.3);
+
+    /* Dark Sidebar */
+    --sidebar-background: 220 35% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 260 80% 55%;
+    --sidebar-primary-foreground: 220 40% 8%;
+    --sidebar-accent: 220 30% 18%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 25% 20%;
+    --sidebar-ring: 260 80% 55%;
   }
 }
 

@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FileDown } from "lucide-react";
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const location = useLocation();
@@ -20,6 +21,7 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Research", path: "/research" },
     { name: "Projects", path: "/projects" },
+    { name: "Publications", path: "/publications" },
     { name: "Leadership", path: "/leadership" },
     { name: "Skills & Awards", path: "/skills" },
     { name: "Contact", path: "/contact" },
@@ -39,7 +41,7 @@ const Navbar = () => {
             Hemish Ahuja
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -60,12 +62,15 @@ const Navbar = () => {
             ))}
           </div>
 
-          <Button size="sm" className="gap-2" asChild>
-            <a href="/resume.pdf" download>
-              <FileDown className="h-4 w-4" />
-              Resume
-            </a>
-          </Button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <Button size="sm" className="gap-2" asChild>
+              <a href="/resume.pdf" download>
+                <FileDown className="h-4 w-4" />
+                Resume
+              </a>
+            </Button>
+          </div>
         </div>
 
         {/* Mobile menu - simplified for now */}

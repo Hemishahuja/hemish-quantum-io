@@ -11,6 +11,7 @@ import Projects from "./pages/Projects";
 import Leadership from "./pages/Leadership";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
+import Publications from "./pages/Publications";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/research" element={<Research />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/publications" element={<Publications />} />
             <Route path="/leadership" element={<Leadership />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />

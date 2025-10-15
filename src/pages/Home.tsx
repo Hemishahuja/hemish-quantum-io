@@ -71,6 +71,40 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Currently Working On Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-primary">
+              Currently Working On
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in border border-border">
+                <div className="text-4xl mb-4">🔬</div>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">Active Research</h3>
+                <p className="text-muted-foreground">
+                  Advancing cryogenic detection systems for eEDM measurement at York's EDM³ Lab, focusing on BaF molecular spin coherence.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in border border-border" style={{animationDelay: "0.1s"}}>
+                <div className="text-4xl mb-4">🎤</div>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">Upcoming Presentations</h3>
+                <p className="text-muted-foreground">
+                  Preparing talks for CAP Congress 2025 and organizing national physics education initiatives as SAC Chair.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in border border-border" style={{animationDelay: "0.2s"}}>
+                <div className="text-4xl mb-4">💡</div>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">Learning & Exploring</h3>
+                <p className="text-muted-foreground">
+                  Deepening expertise in quantum machine learning, topological quantum computing, and advanced numerical methods.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

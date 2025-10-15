@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Microscope } from "lucide-react";
+import { Microscope, Building2, Users, Award, Zap } from "lucide-react";
+import MetricsCard from "@/components/MetricsCard";
 
 const Research = () => {
   const experiences = [
@@ -60,6 +61,14 @@ const Research = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Exploring quantum systems, black holes, and the fundamental nature of reality
             </p>
+          </div>
+
+          {/* Research Impact Metrics */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <MetricsCard icon={Building2} value={5} label="Research Positions" delay={0} />
+            <MetricsCard icon={Users} value={4} label="International Institutions" delay={0.1} />
+            <MetricsCard icon={Award} value={2} label="Hackathon Wins" delay={0.2} />
+            <MetricsCard icon={Zap} value={20} suffix="%" label="Avg Performance Gain" delay={0.3} />
           </div>
 
           <div className="space-y-8">

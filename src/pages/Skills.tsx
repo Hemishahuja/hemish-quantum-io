@@ -1,24 +1,40 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, FlaskConical, Presentation, Trophy } from "lucide-react";
+import SkillProficiency from "@/components/SkillProficiency";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming & Tools",
-      icon: Code,
-      skills: ["Python", "Java", "Git", "Qiskit", "Bash", "PostgreSQL", "LaTeX", "QMOD"],
+      category: "Programming & Tools",
+      skills: [
+        { name: "Python", level: 95, years: "3+ years" },
+        { name: "Qiskit", level: 90, years: "2+ years" },
+        { name: "Git", level: 85, years: "3+ years" },
+        { name: "LaTeX", level: 90, years: "3+ years" },
+        { name: "Java", level: 75, years: "2+ years" },
+        { name: "Bash", level: 80, years: "2+ years" },
+      ]
     },
     {
-      title: "Scientific Techniques",
-      icon: FlaskConical,
-      skills: ["Quantum Simulation", "Optics", "Cryogenic Systems", "Numerical Methods", "Data Analysis"],
+      category: "Scientific Computing",
+      skills: [
+        { name: "Quantum Simulation", level: 95, years: "2+ years" },
+        { name: "Numerical Methods", level: 90, years: "3+ years" },
+        { name: "Data Analysis", level: 85, years: "3+ years" },
+        { name: "Cryogenic Systems", level: 80, years: "1+ year" },
+        { name: "Optics", level: 75, years: "2+ years" },
+      ]
     },
     {
-      title: "Communication",
-      icon: Presentation,
-      skills: ["Scientific Writing", "Public Speaking", "Research Presentation", "Technical Documentation"],
-    },
+      category: "Communication",
+      skills: [
+        { name: "Scientific Writing", level: 90, years: "3+ years" },
+        { name: "Public Speaking", level: 85, years: "2+ years" },
+        { name: "Research Presentation", level: 90, years: "2+ years" },
+        { name: "Technical Documentation", level: 85, years: "3+ years" },
+      ]
+    }
   ];
 
   const awards = [
@@ -66,27 +82,13 @@ const Skills = () => {
 
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-primary">Technical Skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {skillCategories.map((category, index) => (
-                <Card
+                <SkillProficiency
                   key={index}
-                  className="p-6 hover:shadow-xl transition-all duration-300 animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="space-y-4">
-                    <div className="bg-accent/10 p-3 rounded-lg w-fit">
-                      <category.icon className="h-6 w-6 text-accent" />
-                    </div>
-                    <h3 className="text-xl font-bold text-primary">{category.title}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {category.skills.map((skill, i) => (
-                        <Badge key={i} variant="secondary" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </Card>
+                  category={category.category}
+                  skills={category.skills}
+                />
               ))}
             </div>
           </div>

@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Atom, Coffee, Sparkles, Telescope } from "lucide-react";
+import Testimonials from "@/components/Testimonials";
 
 const About = () => {
   const funFacts = [
@@ -69,6 +70,8 @@ const About = () => {
               ))}
             </div>
           </div>
+
+          <Testimonials />
         </div>
       </div>
     </div>

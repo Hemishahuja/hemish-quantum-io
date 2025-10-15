@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Mail } from "lucide-react";
+import Affiliations from "./Affiliations";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
     <footer className="bg-secondary/30 border-t border-border mt-20">
+      <Affiliations />
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>

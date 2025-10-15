@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, MapPin } from "lucide-react";
+import { Mail, Linkedin, Github, MapPin, Calendar, FileText, Download } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -48,21 +48,47 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="border-t border-border pt-8">
-              <h3 className="text-lg font-semibold text-primary mb-4">Connect With Me</h3>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="gap-2 flex-1 min-w-[200px]" asChild>
-                  <a href="https://linkedin.com/in/hemishahuja" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="h-5 w-5" />
-                    LinkedIn
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" className="gap-2 flex-1 min-w-[200px]" asChild>
-                  <a href="https://github.com/hemishahuja" target="_blank" rel="noopener noreferrer">
-                    <Github className="h-5 w-5" />
-                    GitHub
-                  </a>
-                </Button>
+            <div className="border-t border-border pt-8 space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-primary mb-4">Connect With Me</h3>
+                <div className="flex flex-wrap gap-4">
+                  <Button size="lg" className="gap-2 flex-1 min-w-[200px]" asChild>
+                    <a href="https://linkedin.com/in/hemishahuja" target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="h-5 w-5" />
+                      LinkedIn
+                    </a>
+                  </Button>
+                  <Button size="lg" variant="outline" className="gap-2 flex-1 min-w-[200px]" asChild>
+                    <a href="https://github.com/hemishahuja" target="_blank" rel="noopener noreferrer">
+                      <Github className="h-5 w-5" />
+                      GitHub
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="border-t border-border pt-6">
+                <h3 className="text-lg font-semibold text-primary mb-4">Collaboration Opportunities</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <Button variant="outline" className="gap-2" asChild>
+                    <a href="mailto:hemishahuja@gmail.com?subject=Meeting Request">
+                      <Calendar className="h-4 w-4" />
+                      Schedule Meeting
+                    </a>
+                  </Button>
+                  <Button variant="outline" className="gap-2" asChild>
+                    <a href="mailto:hemishahuja@gmail.com?subject=Research Statement Request">
+                      <FileText className="h-4 w-4" />
+                      Request Statement
+                    </a>
+                  </Button>
+                  <Button variant="outline" className="gap-2" asChild>
+                    <a href="/resume.pdf" download>
+                      <Download className="h-4 w-4" />
+                      Download CV
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </Card>
