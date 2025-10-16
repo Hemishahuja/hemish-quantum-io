@@ -73,9 +73,9 @@ const Home = () => {
 
             <div className="flex flex-wrap gap-4 justify-center pt-4">
               <Button size="lg" className="gap-2" asChild>
-                <a href="/resume.pdf" download="HA-Resume.pdf">
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                   <FileDown className="h-5 w-5" />
-                  Download Resume
+                  View Resume
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="gap-2" asChild>
