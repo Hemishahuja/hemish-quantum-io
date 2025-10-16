@@ -2,12 +2,6 @@
   command = "npm ci && npm run build"
   publish = "dist"
 
-[build.environment]
-  NODE_VERSION = "18"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 # Redirect rules for React Router (SPA)
 [[redirects]]
   from = "/*"
