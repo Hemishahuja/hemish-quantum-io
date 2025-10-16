@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, FileDown, Sun, X } from "lucide-react";
-import heroImage from "@/assets/hero-quantum.jpg";
+import heroImage from "@/assets/hero-quantum-animated.jpg";
 import { useState, useEffect } from "react";
 
 const Home = () => {
@@ -35,11 +35,20 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay and Wave Animation */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="Quantum computing visualization"
-            className="w-full h-full object-cover animate-wave"
-          />
+          <div className="absolute inset-0 animate-wave-layer-1">
+            <img
+              src={heroImage}
+              alt="Quantum computing visualization"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="absolute inset-0 animate-wave-layer-2 opacity-60">
+            <img
+              src={heroImage}
+              alt="Quantum computing visualization"
+              className="w-full h-full object-cover"
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/80" />
         </div>
 
