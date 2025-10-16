@@ -1,18 +1,44 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, FileDown } from "lucide-react";
+import { Github, Linkedin, Mail, FileDown, Sun, X } from "lucide-react";
 import heroImage from "@/assets/hero-quantum.jpg";
+import { useState, useEffect } from "react";
 
 const Home = () => {
+  const [showThemeHint, setShowThemeHint] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowThemeHint(false);
+    }, 8000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen">
+      {/* Theme Toggle Hint Popup */}
+      {showThemeHint && (
+        <div className="fixed top-20 right-6 z-50 bg-card/95 backdrop-blur-sm border border-border rounded-lg shadow-lg p-3 animate-fade-in">
+          <button
+            onClick={() => setShowThemeHint(false)}
+            className="absolute -top-2 -right-2 bg-background border border-border rounded-full p-1 hover:bg-accent transition-colors"
+          >
+            <X className="h-3 w-3" />
+          </button>
+          <div className="flex items-center gap-2 text-sm">
+            <Sun className="h-4 w-4 text-primary" />
+            <span className="text-foreground">Toggle light mode in top-right corner</span>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image with Overlay */}
+        {/* Background Image with Overlay and Wave Animation */}
         <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
             alt="Quantum computing visualization"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover animate-wave"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/80" />
         </div>

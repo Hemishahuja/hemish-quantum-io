@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @keyframes wave {
+    0%, 100% {
+      transform: scale(1.05) translateX(0) translateY(0);
+    }
+    25% {
+      transform: scale(1.05) translateX(-2%) translateY(-1%);
+    }
+    50% {
+      transform: scale(1.06) translateX(2%) translateY(1%);
+    }
+    75% {
+      transform: scale(1.05) translateX(-1%) translateY(-2%);
+    }
+  }
+
+  .animate-wave {
+    animation: wave 20s ease-in-out infinite;
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
