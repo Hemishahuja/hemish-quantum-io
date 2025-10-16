@@ -3,23 +3,17 @@
 @tailwind utilities;
 
 @layer utilities {
-  @keyframes wave {
-    0%, 100% {
-      transform: scale(1.05) translateX(0) translateY(0);
+  @keyframes wave-flow {
+    0% {
+      transform: scale(1.1) translate(-3%, -3%);
     }
-    25% {
-      transform: scale(1.05) translateX(-2%) translateY(-1%);
-    }
-    50% {
-      transform: scale(1.06) translateX(2%) translateY(1%);
-    }
-    75% {
-      transform: scale(1.05) translateX(-1%) translateY(-2%);
+    100% {
+      transform: scale(1.1) translate(3%, 3%);
     }
   }
 
   .animate-wave {
-    animation: wave 20s ease-in-out infinite;
+    animation: wave-flow 15s ease-in-out infinite alternate;
   }
 }
 
